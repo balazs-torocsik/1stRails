@@ -1,0 +1,13 @@
+class CreateRepositories < ActiveRecord::Migration[5.0]
+  def change
+    create_table :repositories do |t|
+      t.string :repository_name
+      t.text :description
+      t.datetime :creation_date
+      t.string :created_by
+      t.integer :access_count
+      t.references :user, foreign_key: true
+      t.timestamps
+    end
+  end
+end

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Repository List</h1>
+ 
+<table>
+  <thead>
+    <tr>
+      <th>Repository name</th>
+      <th>Description</th>
+      <th>Creation date</th>
+      <th>Created by</th>
+      <th>Access count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @repositories.each do |repository| %>
+      <tr>
+        <td><%= repository.repository_name %></td>
+        <td><%= repository.description %></td>
+        <td><%= repository.created_at.strftime("%B %d %Y, %l:%M%P") %></td>
+        <td><%= repository.created_by %></td>
+        <td><%= repository.hits %></td>
+        <td><%= link_to 'Show', repository %></td>
+        <td><%= link_to 'Edit', edit_repository_path(repository) %></td>
+        <td><%= link_to 'Destroy', repository, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+

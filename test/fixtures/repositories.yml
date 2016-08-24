@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  repository_name: MyString
+  description: MyText
+  creation_date: 2016-08-24 02:59:53
+  acess_count: 1
+  user: one
+
+two:
+  repository_name: MyString
+  description: MyText
+  creation_date: 2016-08-24 02:59:53
+  acess_count: 1
+  user: two

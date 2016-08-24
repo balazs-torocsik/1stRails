@@ -1,0 +1,27 @@
+<p>
+  <strong>Repository_Name:</strong>
+  <%= @repository.repository_name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @repository.description %>
+</p>
+ 
+<p>
+  <strong>Created_at:</strong>
+  <%= @repository.created_at.strftime("%B %d %Y, %l:%M%P") %>
+</p>
+ 
+ 
+<p>
+  <strong>Created_by:</strong>
+  <%= @repository.created_by %>
+</p>
+  
+<p>
+  <strong>Access_Count:</strong>
+  <%= @repository.hits %>
+</p>
+
+<%= link_to 'Back', repositories_path %>

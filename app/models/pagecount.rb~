@@ -1,0 +1,5 @@
+pagecount < ActiveRecord::Migration
+  def change
+    add_column :pluralized_model_eg_users, :integer, default: 0
+  end
+end
